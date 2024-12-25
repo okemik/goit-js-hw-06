@@ -1,27 +1,29 @@
-// StringBuilder sınıfı tanımı
 class StringBuilder {
+  // Özel alan tanımı
+  #value;
+
   constructor(initialValue) {
-    this.value = initialValue; // İlk dizeyi value özelliğine atar
+    this.#value = initialValue; // İlk dizeyi özel #value özelliğine atar
   }
 
-  // value özelliğinin geçerli değerini döndürür
+  // #value özelliğinin geçerli değerini döndürür
   getValue() {
-    return this.value;
+    return this.#value;
   }
 
-  // value özelliğinin sonuna str ekler
+  // #value özelliğinin sonuna str ekler
   padEnd(str) {
-    this.value += str;
+    this.#value += str;
   }
 
-  // value özelliğinin başına str ekler
+  // #value özelliğinin başına str ekler
   padStart(str) {
-    this.value = str + this.value;
+    this.#value = str + this.#value;
   }
 
-  // value özelliğinin başına ve sonuna str ekler
+  // #value özelliğinin başına ve sonuna str ekler
   padBoth(str) {
-    this.value = str + this.value + str;
+    this.#value = str + this.#value + str;
   }
 }
 
